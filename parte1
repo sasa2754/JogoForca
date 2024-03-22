@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+char letra;
+char palavra[9] = "elefante";
+char palavraMetade[9] =  "________";
+int tentativas = 6;
+
+char *pegarLetra(){
+    printf("Digite uma letra: ");
+    scanf("%c", &letra);
+    for (int i=0;i<8;i++){
+        if(letra==palavra[i]){
+            palavraMetade[i] = letra;
+
+        }
+    }
+    // printf("\n%s", palavraMetade);
+}
+
+
+int main(void){
+    
+    pegarLetra();
+    printf("\n%s", palavraMetade);
+    return 0;
+}
